@@ -28,7 +28,7 @@ class Compare
 public:
     bool operator()(Node *temp1, Node *temp2)
     {
-        return temp1->freq <= temp2->freq;
+        return temp1->freq >= temp2->freq;
     }
 };
 
