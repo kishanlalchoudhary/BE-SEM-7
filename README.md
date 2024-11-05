@@ -1,1 +1,1 @@
-# TE SEM 7 Assignments
+# BE SEM 7 Assignments
