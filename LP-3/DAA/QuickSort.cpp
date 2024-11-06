@@ -19,7 +19,7 @@ int partition(int low, int high, vector<int> &arr)
         }
 
         // Find the element smaller or equal to the pivot
-        while (arr[j] > pivot && i >= low + 1)
+        while (arr[j] > pivot && j >= low + 1)
         {
             j--;
         }
@@ -61,7 +61,7 @@ int randomPartition(int low, int high, vector<int> &arr)
     // Generate random index between low and high
     int randomIndex = low + rand() % (high - low + 1);
 
-    // Swap element at random index with element at high index
+    // Swap element at random index with element at low index
     swap(arr[randomIndex], arr[low]);
 
     // Invoke partition function which will partition the array and return the partition index
@@ -127,7 +127,7 @@ int main()
     // Create copy of array
     vector<int> result2 = arr;
 
-    // Invoke Randomized Quick Sort function for Sorting
+    // Invoke randomized quick sort function for sorting
     randomizedQuickSort(0, n - 1, result2);
 
     // Print sorted array got by randomized quick sort
